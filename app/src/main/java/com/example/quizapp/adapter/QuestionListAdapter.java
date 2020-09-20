@@ -44,6 +44,7 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
     @Override
     public void onBindViewHolder(final QuestionListAdapter.ViewHolder holder, final int position) {
 
+        //Version check
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             holder.tvQuestion.setText((position + 1) + ". " + Html.fromHtml(data.get(position).getQuestion(),Html.FROM_HTML_MODE_COMPACT));
             holder.tvOption1.setText("(1) " + Html.fromHtml(data.get(position).getIncorrect_answers().get(0), Html.FROM_HTML_MODE_COMPACT));
