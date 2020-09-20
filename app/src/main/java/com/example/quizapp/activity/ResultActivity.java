@@ -37,6 +37,7 @@ public class ResultActivity extends AppCompatActivity {
         String strJson = intent.getStringExtra("data");
         Type type = new TypeToken<List<ResponseData.ResultsBean>>() {
         }.getType();
+        // Arraylist
         arrayList = gson.fromJson(strJson, type);
 
         Log.e("list", "" + arrayList.size());
