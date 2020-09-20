@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+       android:layout_margin="@dimen/_5sdp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:textSize="@dimen/_14ssp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="score" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_weight="0.25"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+</LinearLayout>
